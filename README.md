@@ -45,7 +45,7 @@ project/
 # Step 1: Clone the Repository
 
 bash
-git clone https://github.com/jelazj/slider.git
+git clone https://github.com/jelazj/v-slider.git
 cd slider
 Step 2: Open in Browser
 Just open index.html in your browser:
@@ -81,7 +81,10 @@ This project is open-source and free to use.
 
 # Credits
 Developed by @jelazj
-Hosted on Netlify and GitHub
+Hosted on 
+Netlify: https://v-slider.netlify.app/
+GitHub: https://github.com/jelazj/v-slider.git
+
 
 
 
