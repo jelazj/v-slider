@@ -77,6 +77,11 @@ body {
 .slider-container .slider .slide.active .text-overlay {
   opacity: 1;
 }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .slider-container .slider .slide .text-overlay {
+    animation: moveTextMediumScreens 12s ease-in-out forwards;
+  }
+}
 @media screen and (max-width: 600px) {
   .slider-container .slider .slide .text-overlay {
     animation: moveTextSmallScreens 12s ease-in-out forwards;
@@ -121,6 +126,15 @@ body {
   }
   100% {
     transform: translate(-50%, -50%) translateX(400px);
+  }
+}
+/* Text overlay key frames on medium screens*/
+@keyframes moveTextMediumScreens {
+  0% {
+    transform: translate(-50%, -50%) translateX(140px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(200px);
   }
 }
 /* Text overlay key frames on small screens*/

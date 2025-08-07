@@ -61,15 +61,17 @@
                 .text-overlay {
                     opacity: 1;
                 }
-            
             }
-            @media screen and (max-width: 600px) {
-
+            @media screen and (min-width: 600px) and (max-width: 900px) {
                 .text-overlay {
-                animation: moveTextSmallScreens 12s ease-in-out forwards;
+                    animation: moveTextMediumScreens 12s ease-in-out forwards;
                 }
             }
-           
+            @media screen and (max-width: 600px) {
+                .text-overlay {
+                    animation: moveTextSmallScreens 12s ease-in-out forwards;
+                }
+            }
         }
     }
 
@@ -119,6 +121,16 @@
         transform: translate(-50%, -50%) translateX(400px);
     }
 }
+/* Text overlay key frames on medium screens*/
+@keyframes moveTextMediumScreens {
+    0% {
+        transform: translate(-50%, -50%) translateX(140px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(200px);
+    }
+}
 
 /* Text overlay key frames on small screens*/
 @keyframes moveTextSmallScreens {
@@ -131,9 +143,7 @@
     }
 }
 
-
 /**********************end of slider styles*********************/
-
 
 .empty-under-section {
     width: 100%;

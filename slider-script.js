@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginationContainer = document.querySelector('.slider-pagination');
 
     const totalSlides = slides.length;
-    if (totalSlides === 0) return;
+    // Prevent slider from starting if there are no slides 
+    if (totalSlides === 0) return; 
 
     //set up the fisrt slide
     let currentSlide = 0;
     let sliderInterval;
 
-    //Update slide
+    //Update slide and dot pagination
     const updateSlide = (index) => {
         slides.forEach(slide => slide.classList.remove('active'));
         document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
@@ -26,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide((currentSlide + 1) % totalSlides);
     };
 
-    //Auto play slider
+    //Auto play slider: set the duration between slide transitions (in milliseconds)
     const startSlider = () => {
-        sliderInterval = setInterval(rotateSlider, 12000);
+        sliderInterval = setInterval(rotateSlider, 12000); // 12000ms = 12 seconds
     };
 
     // Stop slider
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(sliderInterval);
     };
 
-    //generate pagination dots
+    //Generate pagination dots
     const generateDots = () => {
         paginationContainer.innerHTML = '';
         for (let i=0; i < totalSlides; i++) {
