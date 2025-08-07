@@ -41,6 +41,16 @@
                     font-size: 6rem;
                     text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
                 }
+                @media screen and (max-width: 1024px) {
+                    h2 {
+                        font-size: 4rem;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
             }
             &.active {
                 display: block;
@@ -51,7 +61,15 @@
                 .text-overlay {
                     opacity: 1;
                 }
+            
             }
+            @media screen and (max-width: 600px) {
+
+                .text-overlay {
+                animation: moveTextSmallScreens 12s ease-in-out forwards;
+                }
+            }
+           
         }
     }
 
@@ -102,4 +120,22 @@
     }
 }
 
+/* Text overlay key frames on small screens*/
+@keyframes moveTextSmallScreens {
+    0% {
+        transform: translate(-50%, -50%) translateX(100px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(140px);
+    }
+}
+
+
 /**********************end of slider styles*********************/
+
+
+.empty-under-section {
+    width: 100%;
+    min-height: 600px;
+}
