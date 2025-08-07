@@ -29,6 +29,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  display: none;
 }
 .slider-container .slider .slide img {
   width: 100vw;
@@ -38,6 +39,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 .slider-container .slider .slide .text-overlay {
   position: absolute;
@@ -46,11 +48,22 @@ body {
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
+  opacity: 0.1;
   z-index: 10;
 }
 .slider-container .slider .slide .text-overlay h2 {
   font-size: 6rem;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+.slider-container .slider .slide.active {
+  display: block;
+}
+.slider-container .slider .slide.active img {
+  /* Set opacity to 1 when the slide is active */
+  opacity: 1;
+}
+.slider-container .slider .slide.active .text-overlay {
+  opacity: 1;
 }
 .slider-container .slider-pagination {
   position: absolute;
