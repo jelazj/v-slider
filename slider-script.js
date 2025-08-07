@@ -27,19 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
         sliderInterval = setInterval(rotateSlider, 4000);
     };
 
+    // Stop slider
+    const stopSlider = () => {
+        clearInterval(sliderInterval);
+    };
 
 
+    //initialise slider
     slides[0].classList.add('active');
     startSlider();
 
-    
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopSlider);
+    slider.addEventListener('mouseleave', startSlider);
 
-    
-
- 
-    
-
-    
 
 
 });
