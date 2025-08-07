@@ -1,0 +1,59 @@
+@import "variables";
+@import "global";
+
+/**********************slider styles*********************/
+.slider-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .slider {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        .slide {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+
+            img {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+            }
+            .text-overlay {
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: translate(-50%, -50%);
+                    color: $titleColor;
+                    text-align: center;
+                    z-index: 10;
+                    h2 {
+                        font-size: 6rem;
+                        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+                    }
+                }
+        }
+    }
+
+     /*slider pagination*/
+    .slider-pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 10px;
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+
+}
+
+/**********************end of slider styles*********************/
